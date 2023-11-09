@@ -11,8 +11,8 @@ export class SecuredocController {
     return this.securedocService.getHello();
   }
 
-  @EventPattern('user_created')
-  handleUserCreated(data: string) {
-    return `User created ${data}`;
+  @MessagePattern({ cmd: 'created_user' })
+  handleUserCreated() {
+    return { msg: `User created form secureDoc` };
   }
 }

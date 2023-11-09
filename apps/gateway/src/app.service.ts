@@ -12,6 +12,6 @@ export class AppService {
   }
 
   createUser() {
-    return this.secureDocClient.emit('user_created', 'purnakanishka@gmail.com');
+    return this.secureDocClient.send({ cmd: 'created_user' }, {});
   }
 }

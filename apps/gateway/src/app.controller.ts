@@ -13,6 +13,6 @@ export class AppController {
   @Post()
   createUser() {
     console.log('gateway reached');
-    this.appService.createUser();
+    return this.appService.createUser();
   }
 }

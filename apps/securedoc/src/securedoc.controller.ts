@@ -13,6 +13,6 @@ export class SecuredocController {
 
   @EventPattern('user_created')
   handleUserCreated(data: string) {
-    console.log(`User created ${data}`);
+    return `User created ${data}`;
   }
 }

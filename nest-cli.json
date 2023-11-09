@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/gateway/src",
+  "compilerOptions": {
+    "deleteOutDir": true,
+    "webpack": true,
+    "tsConfigPath": "apps/gateway/tsconfig.app.json"
+  },
+  "monorepo": true,
+  "root": "apps/gateway",
+  "projects": {
+    "gateway": {
+      "type": "application",
+      "root": "apps/gateway",
+      "entryFile": "main",
+      "sourceRoot": "apps/gateway/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/gateway/tsconfig.app.json"
+      }
+    },
+    "securedoc": {
+      "type": "application",
+      "root": "apps/securedoc",
+      "entryFile": "main",
+      "sourceRoot": "apps/securedoc/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/securedoc/tsconfig.app.json"
+      }
+    },
+    "subscription": {
+      "type": "application",
+      "root": "apps/subscription",
+      "entryFile": "main",
+      "sourceRoot": "apps/subscription/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/subscription/tsconfig.app.json"
+      }
+    },
+    "sandbox": {
+      "type": "application",
+      "root": "apps/sandbox",
+      "entryFile": "main",
+      "sourceRoot": "apps/sandbox/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/sandbox/tsconfig.app.json"
+      }
+    }
+  }
+}
